@@ -11,7 +11,10 @@ defmodule DevNull.Application do
     Logger.info("Starting DevNull.Application...")
 
     children = [
-      {Plug.Cowboy, scheme: :http, plug: DevNull.Router, options: [port: 4000]}
+      {Plug.Cowboy,
+       scheme: :http,
+       plug: DevNull.Router,
+       options: [port: System.get_env("PORT") |> String.to_integer()]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
