@@ -12,4 +12,12 @@ defmodule DevNull.Router do
   get "/:status" do
     send_resp(conn, String.to_integer(status), "")
   end
+
+  post "/:status" do
+    send_resp(conn, String.to_integer(status), "")
+  end
+
+  post "/:status/statements" do
+    send_resp(conn, String.to_integer(status), "")
+  end
 end
