@@ -17,7 +17,7 @@ defmodule DevNull.Router do
     send_resp(conn, String.to_integer(status), "")
   end
 
-  post "/:status/statements" do
-    send_resp(conn, String.to_integer(status), "")
+  post "/statements" do
+    send_resp(conn, 202, "")
   end
 end
