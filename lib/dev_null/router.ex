@@ -1,7 +1,7 @@
 defmodule DevNull.Router do
   use Plug.Router
 
-  plug(Plug.Parsers, parsers: [:urlencoded], pass: ["text/*"])
+  plug(Plug.Parsers, parsers: [:urlencoded], pass: ["text/*", "application/json"])
   plug(:match)
   plug(:dispatch)
 
