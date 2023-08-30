@@ -20,4 +20,16 @@ defmodule DevNull.Router do
   post "/:status" do
     send_resp(conn, String.to_integer(status), "")
   end
+
+  put "/:status/*" do
+    send_resp(conn, String.to_integer(status), "")
+  end
+
+  get "/:status/*" do
+    send_resp(conn, String.to_integer(status), "")
+  end
+
+  post "/:status/*" do
+    send_resp(conn, String.to_integer(status), "")
+  end
 end
