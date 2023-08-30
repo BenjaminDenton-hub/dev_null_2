@@ -21,15 +21,15 @@ defmodule DevNull.Router do
     send_resp(conn, String.to_integer(status), "")
   end
 
-  put "/:status/*" do
+  put "/:status/*catch" do
     send_resp(conn, String.to_integer(status), "")
   end
 
-  get "/:status/*" do
+  get "/:status/*catch" do
     send_resp(conn, String.to_integer(status), "")
   end
 
-  post "/:status/*" do
+  post "/:status/*catch" do
     send_resp(conn, String.to_integer(status), "")
   end
 end
