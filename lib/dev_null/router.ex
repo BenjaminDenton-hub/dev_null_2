@@ -9,10 +9,6 @@ defmodule DevNull.Router do
     send_resp(conn, 202, "")
   end
 
-  post "/api/payment-method-setups" do
-    send_resp(conn, 422, "")
-  end
-
   put "/:status" do
     send_resp(conn, String.to_integer(status), "")
   end
