@@ -10,7 +10,7 @@ defmodule DevNull.Router do
   end
 
   post "/api/payment-method-setups" do
-    send_resp(conn, 422, Jason.encode!(%{}))
+    send_resp(conn, 422, "")
   end
 
   put "/:status" do
